@@ -25,7 +25,6 @@ fastapi
 uvicorn
 pydantic
 python-multipart
-gunicorn
 setuptools
 wheel
 psutil
