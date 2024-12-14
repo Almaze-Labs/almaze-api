@@ -5,7 +5,4 @@ from .overwrite_file import overwrite_file
 
 __all__ = [
     'write_to_file',
-    'read_file',
     'delete_file',
-    'overwrite_file'
-]
