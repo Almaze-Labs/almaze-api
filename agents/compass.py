@@ -104,7 +104,6 @@ Return your analysis in this format:
     def _process_step(self, state: AgentState) -> AgentState:
         """Process a single step with proper agent coordination."""
         print(f"\n{self.name} is thinking...")
-        messages = state.get('messages', [])
         iterations = state.get('iterations', 0)
         
         try:
@@ -207,7 +206,6 @@ Return your analysis in this format:
                 })
 
         return agent_responses
-
     def _create_subtask(self, original_task: str, agent: str, previous_responses: List[Dict[str, str]]) -> str:
         """Create a subtask for an agent based on context."""
         previous_responses_str = "\n".join([
