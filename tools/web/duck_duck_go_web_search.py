@@ -110,7 +110,6 @@ class WebSearchTool:
             'link': '',
             'snippet': f"Unable to find information about {query}. Please try a different query."
         }]
-
 # Create a tool wrapper
 @tool
 def duck_duck_go_web_search(query: str, max_results: int = 5) -> List[Dict[str, str]]:
