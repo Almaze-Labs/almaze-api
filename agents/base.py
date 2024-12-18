@@ -157,7 +157,6 @@ Instructions:
             
             response = self.llm.invoke(summary_prompt)
             return response.content
-        except Exception as e:
             return f"Failed to generate final answer: {str(e)}"
 
     def _should_continue(self, state: AgentState) -> Literal["continue", END]:
