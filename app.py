@@ -27,7 +27,6 @@ async def check_memory_usage(request, call_next):
     # Force garbage collection before processing request
     gc.collect()
     
-    # Get current memory usage
     process = psutil.Process(os.getpid())
     mem_before = process.memory_info().rss / 1024 / 1024  # Memory in MB
     
