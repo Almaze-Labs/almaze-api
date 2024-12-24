@@ -5,11 +5,13 @@ from langchain_core.tools import tool
 @tool
 def fetch_web_page_content(url: str) -> str:
     """Fetch and process the content of a web page."""
+    try:
         # Add user agent to avoid blocks
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
         
+        response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
         
         soup = BeautifulSoup(response.text, 'html.parser')
