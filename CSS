@@ -9,14 +9,12 @@ body {
 header {
     text-align: center;
 }
-
 #projects {
     margin-top: 20px;
 }
 
 .project {
     border: 1px solid #ddd;
-    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -24,6 +22,5 @@ header {
     .project {
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
 }
