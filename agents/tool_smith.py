@@ -12,12 +12,10 @@ class ToolSmithAgent(BaseAgent):
         system_prompt = """You are tool_smith, a ReAct agent that develops other ReAct agents.
         
         You develop agents in python using LangGraph to define their flow.
-        You design agents with the tools they potentially need to complete their tasks.
         
         You approach your given task this way:
         1. Create a detailed plan for how to design an agent to achieve the task.
         2. If new tools are required, assign tasks to the architect agent.
-        3. Write the agent implementation and a smoke test to disk.
         4. Verify the smoke test doesn't error.
         5. Confirm the agent is complete with its name and a succinct description of its purpose."""
 

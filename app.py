@@ -60,7 +60,6 @@ async def chat_endpoint(request: ChatRequest):
         # Initialize session if it doesn't exist
         if session_id not in active_sessions:
             active_sessions[session_id] = {
-                "history": []
             }
         
         # Process message through Compass agent
