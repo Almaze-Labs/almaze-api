@@ -34,7 +34,6 @@ def load_module_functions(directory: str, module_type: str) -> List[Any]:
             for file in os.listdir(dir_path / item):
                 if file.endswith('.py') and not file.startswith('__'):
                     module_name = f"{directory}.{item}.{file[:-3]}"
-                    module = importlib.import_module(module_name)
                     for name, obj in inspect.getmembers(module):
                         if inspect.isfunction(obj) and hasattr(obj, f"_{module_type}"):
                             functions.append(obj)
@@ -45,7 +44,6 @@ def load_module_functions(directory: str, module_type: str) -> List[Any]:
             for name, obj in inspect.getmembers(module):
                 if inspect.isfunction(obj) and hasattr(obj, f"_{module_type}"):
                     functions.append(obj)
-    
     return functions
 
 def all_tool_functions(exclude: Optional[List[str]] = None) -> List[Any]:
@@ -67,6 +65,5 @@ def all_agents(exclude: Optional[List[str]] = None) -> List[str]:
     return agents
 
 def checkpointer(state: Dict[str, Any]) -> Dict[str, Any]:
-    """Checkpoint the current state."""
     logger.debug(f"Current state: {state}")
     return state
