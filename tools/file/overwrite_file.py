@@ -1,4 +1,3 @@
-from langchain_core.tools import tool
 
 @tool
 def overwrite_file(filepath: str, content: str) -> str:
@@ -11,4 +10,3 @@ def overwrite_file(filepath: str, content: str) -> str:
             f.write(content)
         return f"Successfully overwrote {filepath}"
     except Exception as e:
-        return f"Error overwriting file: {str(e)}"

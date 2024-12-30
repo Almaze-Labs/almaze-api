@@ -162,7 +162,6 @@ Provide a production-ready solution that emphasizes:
             analysis = self._analyze_task(task)
             
             # Implementation generation
-            implementation_prompt = self._get_implementation_prompt(task, analysis)
             implementation = self.llm.invoke(implementation_prompt)
             
             # Process code blocks
