@@ -17,6 +17,7 @@ RUN apt-get update \
         gcc \
         python3-dev \
         curl \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt .
