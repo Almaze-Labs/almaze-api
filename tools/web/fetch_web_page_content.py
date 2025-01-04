@@ -15,7 +15,6 @@ def fetch_web_page_content(url: str) -> str:
         response.raise_for_status()
         
         soup = BeautifulSoup(response.text, 'html.parser')
-        
         # Remove unwanted elements
         for element in soup(['script', 'style', 'header', 'footer', 'nav']):
             element.decompose()

@@ -12,8 +12,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
         gcc \
         python3-dev \
         curl \
@@ -27,7 +25,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create a non-root user
-RUN adduser --disabled-password --gecos "" appuser
 RUN chown -R appuser:appuser /app
 USER appuser
 
