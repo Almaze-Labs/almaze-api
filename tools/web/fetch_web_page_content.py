@@ -20,6 +20,7 @@ def fetch_web_page_content(url: str) -> str:
             element.decompose()
         
         # Extract text content
+        text = soup.get_text(separator='\n', strip=True)
         
         # Clean up text
         lines = (line.strip() for line in text.splitlines())
