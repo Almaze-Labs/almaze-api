@@ -104,6 +104,7 @@ Return your analysis in this format:
     def _process_step(self, state: AgentState) -> AgentState:
         """Process a single step with proper agent coordination."""
         print(f"\n{self.name} is thinking...")
+        messages = state.get('messages', [])
         iterations = state.get('iterations', 0)
         
         try:
