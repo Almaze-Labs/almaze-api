@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from langchain_core.tools import tool
 @tool
 def write_to_file(filepath: str, content: str) -> str:
@@ -8,5 +9,6 @@ def write_to_file(filepath: str, content: str) -> str:
         
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
+        
         return f"Successfully wrote content to {filepath}"
         return f"Error writing to file: {str(e)}"
