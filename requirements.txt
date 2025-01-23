@@ -1,0 +1,32 @@
+# langchain==0.1.0
+# langchain-openai==0.0.2
+# langgraph>=0.0.15
+# duckduckgo-search==4.1.1
+# beautifulsoup4==4.12.2
+# requests==2.31.0
+# pytest==8.0.0
+# python-dotenv==1.0.0
+# aiohttp==3.9.1
+# black==24.1.1
+# isort==5.13.2
+# mypy==1.8.0
+langchain
+langchain-openai
+langgraph
+duckduckgo-search
+beautifulsoup4
+requests
+pytest
+python-dotenv
+aiohttp
+black
+isort
+mypy
+fastapi
+uvicorn
+pydantic
+python-multipart
+gunicorn
+setuptools
+wheel
+psutil

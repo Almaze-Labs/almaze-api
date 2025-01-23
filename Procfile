@@ -1,0 +1,1 @@
+web: gunicorn -w 2 -k uvicorn.workers.UvicornWorker --timeout 300 --graceful-timeout 120 --keep-alive 120 --max-requests 1000 --max-requests-jitter 50 --worker-tmp-dir /dev/shm --worker-class uvicorn.workers.UvicornWorker --log-level info app:app

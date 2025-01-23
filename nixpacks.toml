@@ -1,0 +1,18 @@
+
+[phases.setup]
+cmds = [
+  "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
+  'source $HOME/.cargo/env'
+]
+aptPkgs = [
+  "build-essential",
+  "curl",
+  "pkg-config"
+]
+[phases.install]
+cmds = [
+  "python -m venv --copies /opt/venv",
+  ". /opt/venv/bin/activate",
+  "pip install --upgrade pip",
+  "pip install -r requirements.txt"
+]
